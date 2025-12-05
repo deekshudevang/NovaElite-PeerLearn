@@ -20,6 +20,8 @@ interface ChatWindowProps {
 export default function ChatWindow({ isOpen, onClose, roomId, tutoringRequestId }: ChatWindowProps) {
   const [currentRoom, setCurrentRoom] = useState<ChatRoom | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
+
+  
   const [newMessage, setNewMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
